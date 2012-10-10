@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Hangman AngularJS</title>
+    <link href="hangman.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="angular-1.0.1.min.js" type="text/javascript"></script>
+    <script src="hangman.js" type="text/javascript"></script>
+</head>
+<body>
+    <div ng-app="hangmanApp" ng-controller="hangmanController">
+        <div id="word">
+            <div ng-repeat="letter in word" class="letter" id="letter{{ $index }}">&nbsp;</div>
+        </div>
+        <br>
+        <div>Letras erradas: <div id="wrongLetters"></div></div>
+        <div id="answer"></div>
+        <div id="keyboard">
+            <input ng-repeat="letter in alphabet" type="button"
+                    value="{{ letter }}" hangmankey>
+        </div>
+        <div>
+            <div id="hangman_image" style="position: relative;">
+                <img src="images/hanger.png"
+                        style="position: absolute; left: 0; top: 0;">
+                <img id="body5" src="images/head.png" class="hangman_body">
+                <img id="body4" src="images/body.png" class="hangman_body">
+                <img id="body3" src="images/left_leg.png" class="hangman_body">
+                <img id="body2" src="images/right_leg.png" class="hangman_body">
+                <img id="body1" src="images/left_arm.png" class="hangman_body">
+                <img id="body0" src="images/right_arm.png" class="hangman_body">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+#word .letter {
+    border: 1px black solid;
+    width: 22px;
+    text-align: center;
+    display: inline-block
+}
+
+.hangman_body {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display:none;
+}
